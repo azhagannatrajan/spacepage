@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Space Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 20px;
+        transition: background-color 0.5s, color 0.5s;
+      }
+      h1 {
+        font-size: 40px;
+        color: #0059FF;
+        margin-bottom: 10px;
+      }
+      .tagline {
+        font-style: italic;
+        margin-bottom: 30px;
+        color: gray;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #0059FF;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #003EB3;
+      }
+      .fact-box {
+        background-color: #F0F0F0;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 15px;
+        width: 80%;
+        max-width: 600px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      /* Dark Mode Styles */
+      .dark-mode {
+        background-color: #111;
+        color: #eee;
+      }
+      .dark-mode .fact-box {
+        background-color: #222;
+        color: #ddd;
+      }
+      .dark-mode button {
+        background-color: #33C4FF;
+        color: black;
+      }
+      .dark-mode button:hover {
+        background-color: #1FA8F5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🚀 My Space Page</h1>
+    <p class="tagline">Explore the universe in light or dark</p>
+    <button onclick="toggleTheme()" id="themeBtn">Switch to Dark Mode</button>
+    <div class="fact-box">
+      <h2>🌍 Earth</h2>
+      <p>Earth is our home and the only known planet with life.</p>
+    </div>
+    <div class="fact-box">
+      <h2>🪐 Saturn</h2>
+      <p>Saturn has beautiful rings made of ice and rock.</p>
+    </div>
+    <div class="fact-box">
+      <h2>🌕 The Moon</h2>
+      <p>The Moon orbits Earth and affects tides on our planet.</p>
+    </div>
+    <script>
+      var isDark = false;
+      function toggleTheme() {
+        isDark = !isDark;
+        document.body.classList.toggle("dark-mode");
+        var btn = document.getElementById("themeBtn");
+        if (isDark) {
+          btn.textContent = "Switch to Light Mode";
+        } else {
+          btn.textContent = "Switch to Dark Mode";
+        }
+      }
+    </script>
+  </body>
+</html>
